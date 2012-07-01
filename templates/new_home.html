@@ -1,132 +1,83 @@
-<!DOCTYPE HTML5>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="{{MEDIA_URL}}js/development-bundle/themes/redmond/jquery.ui.all.css"/>
-    <link rel="stylesheet" href="http://www.shaastra.org/people/erp/erp-html/css/erp_main.css"/>
-    <link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/style.css" />
-    <link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/buttons.css" />
-    <link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/jquery.datepick.css" />
-        
-    <script type="text/javascript" src="{{MEDIA_URL}}js/development-bundle/jquery-1.5.1.js"></script> 
-    <script type="text/javascript" src="{{MEDIA_URL}}js/development-bundle/ui/jquery.ui.core.js"></script>
-    <script type="text/javascript" src="{{MEDIA_URL}}js/development-bundle/ui/jquery.ui.widget.js"></script>
-    <script type="text/javascript" src="{{MEDIA_URL}}js/development-bundle/ui/jquery.ui.mouse.js"></script>
-    <script type="text/javascript" src="{{MEDIA_URL}}js/development-bundle/ui/jquery.ui.sortable.js"></script>
-    <script type="text/javascript" src="{{MEDIA_URL}}js/development-bundle/ui/jquery.ui.accordion.js"></script>
-    <script type="text/javascript" src="{{MEDIA_URL}}js//development-bundle/ui/jquery.ui.tabs.js"></script>
-    <script type="text/javascript" src="{{MEDIA_URL}}js/script.js"></script>
-    <script type="text/javascript" src="{{MEDIA_URL}}js/jquery.datepick.js"></script>
-    
-    
-    <script>
-      $(function() {
-      $( "#tabs" ).tabs();
-      });
-      
-      $(function() {
-      var stop = false;
-      $( "#accordion h3" ).click(function( event ) {
-      if ( stop ) {
-      event.stopImmediatePropagation();
-      event.preventDefault();
-      stop = false;
+    <meta charset="utf-8">
+    <title>Shaastra | ERP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="{{ STATIC_URL }}bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        background: white;
       }
-      });
-      $( "#accordion" )
-      .accordion({
-      collapsible: true,
-      header: "> div > h3"
-      })
-      .sortable({
-      axis: "y",
-      handle: "h3",
-      stop: function() {
-      stop = true;
-      }
-      });
-      });
       
-      $(function() {
-      $( "#accordion1" ).accordion({
-      collapsible: true,
-      autoHeight: false
-      });
-      });
-    </script>
-    <style type = "text/css" >
-      body 
+      .span4
       {
-      background-image:url("/b1.jpeg");
-      background-repeat:no-repeat;
-      }
-      .rbroundbox    { background: url({{MEDIA_URL}}images/erp/images/corners_bg.gif) repeat; }
-      .rbtop         { background: url({{MEDIA_URL}}images/erp/images/corners_top.gif) repeat-x; }
-      .rbtop div     { background: url({{MEDIA_URL}}images/erp/images/corners_top_left.gif) no-repeat top left; }
-      .rbtop div div { background: url({{MEDIA_URL}}images/erp/images/corners_top_right.gif) no-repeat top right; }
-      .rbbot         { background: url({{MEDIA_URL}}images/erp/images/corners_bottom.gif) repeat-x; }
-      .rbbot div     { background: url({{MEDIA_URL}}images/erp/images/corners_bottom_left.gif) no-repeat top left; }
-      .rbbot div div { background: url({{MEDIA_URL}}images/erp/images/corners_bottom_right.gif) no-repeat top right; }
-      .rbcontentwrap { background: url({{MEDIA_URL}}images/erp/images/corners_left.gif) repeat-y; }
-      .rbcontent     { background: url({{MEDIA_URL}}images/erp/images/corners_right.gif) repeat-y right; }
-      
-      
-      /* height and width details */
-      .rbtop div,  .rbtop,  .rbbot div,  .rbbot {
-      width: 100%;
-      height: 26px;
-      font-size: 1px;
-      }
-      .rbcontent  { padding: 1px 2em; margin: 0;  }
-      .rbroundbox { width: 500px;  }
-
-
+      padding-top: 10px;
+      padding-left: 0px;
+      padding-bottom: 50px;
+      }           
     </style>
-
-    <link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/style.css" />
-    <link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/jquery.datepick.css" />
-    <script type="text/javascript" src="{{MEDIA_URL}}js/script.js">
-    </script>
-    <script type="text/javascript" src="{{MEDIA_URL}}js/jquery.datepick.js">
-    </script>
-
-    {% block javascript_stuff %}
+    <link href="{{ STATIC_URL }}bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
     
-    {% endblock %}
 
-    {% block style_stuff %}
-    
-    {% endblock style_stuff %}
 
-    <title>
-      {% block title %}
-      Shaastra ERP |
-      {% endblock title %}
-    </title>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="bootstrap/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bootstrap/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="bootstrap/ico/apple-touch-icon-57-precomposed.png">
+
+   
   </head>
+  
+  
+  
   <body>
-    <div id="header">
-      <h1 id="title">Shaastra ERP</h1>
-      {% block top_bar %}
-      
-      <div id="links" align="right">
-	{% if user_name %}
-	Welcome, <a href="{% url tasks.views.display_portal owner_name=user %}">{{ user_name }}</a>.
-	<!-- <div id="navigation"> -->
-	<!--   <\!-- To be filled up -\-> -->
-	<!-- </div> -->
-	<a href="{% url home.views.logout %}"> Logout</a>
-	{% endif %}
+  
+  <div class="nav-collapse">
+      <ul class="nav">  	
+              <li class="active"><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
+              <li><a href="#about"><i class="icon-user icon-white"></i> Profile</a></li>
+              <li><a href="#contact"><i class="icon-wrench icon-white"></i> Contact</a></li>
+              <li class="divider-vertical"></li>
+           
+            </ul>
+            <ul class="nav">
+	          	<li>
+	          	
+	          	<div class="input-append">
+	          	<form class="navbar-search">
+	    		<div class="input-append">
+	    		<input type="text" class="input-xlarge search-query" placeholder="Search for tasks">
+	    		<a href="#"><i class="icon-search icon-white"></i></a>
+	    		</div>
+	    		</form>
+	    		</div>
+	    		</li>
+	    		
+	       	</ul>
+          </div><!--/.nav-collapse -->
+        </div>
       </div>
-      {% endblock top_bar %}
     </div>
-
-    {% block body %}
-    {% endblock body %}
-
-    {% block bottom_bar %}
-    <div id="footer">
-    </div>
-    <!-- To be filled in -->
-    {% endblock bottom_bar %}
+  
+  <!-- ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{ STATIC_URL }}bootstrap/js/jquery.js"></script>
+    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap.js"></script>
+    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap.min.js"></script>
   </body>
+  
 </html>

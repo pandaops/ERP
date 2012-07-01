@@ -9,6 +9,7 @@ from haystack.views import SearchView
 from haystack.forms import ModelSearchForm
 from haystack.forms import SearchForm
 from haystack.views import search_view_factory
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 haystack.autodiscover()
 
 admin.autodiscover()
@@ -40,4 +41,7 @@ urlpatterns = patterns('',(r'^createdata/', do_it_all),
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 )
+
+
+urlpatterns += staticfiles_urlpatterns()
 
